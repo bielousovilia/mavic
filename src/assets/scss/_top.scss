@@ -1,0 +1,104 @@
+.top {
+  display: flex;
+  // align-items: flex-end;
+  align-items: center;
+
+  @media (max-width: $md - 1) {
+    align-items: flex-end;
+  }
+
+  background: {
+    // image: url('./../images/top-bg.jpg');
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    // background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000000 87.89%);
+    opacity: 0.4;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    @media (max-width: $sm + 1) {
+      top: -15vh;
+    }
+
+    @media (max-width: $sm) and (max-height: $md) {
+      top: -8vh;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 96px;
+    line-height: 115px;
+    font-weight: 600;
+
+    @media (max-width: $md) {
+      font-size: 76px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 50px;
+    }
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    max-width: 325px;
+    margin-bottom: 35px;
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__social-item {
+    margin-right: 50px;
+  }
+
+  &__social-item:last-child {
+    margin-right: 0px;
+  }
+
+  &__social-link {}
+
+  &__social-img {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.container {}
+
+.scroll {
+
+  &__btn {}
+}

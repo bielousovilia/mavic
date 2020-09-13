@@ -1,0 +1,181 @@
+//основные стили по умолчанию
+html,
+body {
+  height: 100%;
+  font-size: 10px;
+
+  @media (max-width: $md) {
+    font-size: 8px;
+  }
+}
+
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100%;
+
+  .content {
+    overflow: hidden;
+    flex: 1 0 auto;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    flex: 0 0 auto;
+    color: #fff;
+    z-index: 2;
+  }
+}
+
+//конец основным стилям по умолчанию
+
+html {
+  box-sizing: border-box;
+  // scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+  color: #fff;
+  font-family: $fontMain;
+  font-size: 1.7rem;
+  line-height: 2.6rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  font-size: inherit;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  max-width: 1270px;
+  height: inherit;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.page-section {
+  min-height: 100vh;
+
+  background: {
+    image: url('./../images/page-bg.jpg');
+    repeat: no-repeat;
+    position: top center;
+    size: cover;
+  }
+
+  position: relative;
+  z-index: 1;
+  padding: 7.5rem 0px 5rem;
+
+  @media (max-width: $sm) {
+    padding: 5rem 0px 5rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(107.54deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
+    opacity: 0.3;
+  }
+}
+
+.scroll__btn {
+  position: absolute;
+  display: inline-block;
+  bottom: 4rem;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 55px;
+  padding-left: 25px;
+  padding-top: 7rem;
+  font-family: $myFont;
+  font-weight: 400;
+  font-size: 4.4rem;
+  line-height: 5.3rem;
+
+  @media (max-width: $lg) {
+    padding-top: 0rem;
+  }
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+%border__img {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fff;
+  top: -20px;
+  left: 20px;
+}
+
+.scroll__page {
+  position: fixed;
+  bottom: 50px;
+  z-index: 10;
+  right: 40px;
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+  // background-color: aqua;
+
+  img {
+    width: 30px;
+    height: 20px;
+    transform: rotate(180deg);
+  }
+}
